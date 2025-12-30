@@ -13,88 +13,42 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="home-banner-sec" style={{
-            position: 'relative',
-            minHeight: '100vh',
-            padding: '12rem 0 8rem',
-            background: 'url(/assets/home-banner-img-min.png) no-repeat center center / cover',
-            display: 'flex',
-            alignItems: 'center',
-            textAlign: 'center'
-        }}>
-            {/* Overlay */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                background: 'rgba(0,0,0,0.6)',
-                zIndex: 1
-            }}></div>
+        <section className="home-banner-sec hero-section">
+            <div className="hero-overlay"></div>
 
-            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-                <h2 style={{
-                    fontSize: '2.8rem',
-                    color: '#fff',
-                    textTransform: 'uppercase',
-                    letterSpacing: '2px',
-                    fontFamily: 'var(--font-outfit)',
-                    marginBottom: '10px'
-                }}>
-                    Shree Vishwakarma Business Expo
-                </h2>
+            <div className="container hero-inner">
+                <h2 className="hero-title">Shree Vishwakarma Business Expo</h2>
 
-                <div style={{ margin: '20px 0' }}>
-                    <p style={{
-                        fontSize: '3.8rem',
-                        color: 'var(--primary)',
-                        fontWeight: 600,
-                        lineHeight: '1.2'
-                    }}>
-                        {industries[currentIndustry]}
-                    </p>
+                <div className="hero-industry-wrap">
+                    <p className="hero-industry">{industries[currentIndustry]}</p>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginTop: '40px' }}>
-                    <span style={{ color: '#fff', fontSize: '18px' }}>Mevada Community</span>
-                    <img src="/assets/ai_speaker_sonu.png" alt="Speakers" style={{ width: '320px', borderRadius: '50px' }} />
-                    <span style={{ color: '#fff', fontSize: '18px' }}>123+ Stalls</span>
+                <div className="hero-speaker-row">
+                    <span className="hero-meta-text">Mevada Community</span>
+                    <img src="/assets/ai_speaker_sonu.png" alt="Speakers" className="hero-image" />
+                    <span className="hero-meta-text">123+ Stalls</span>
                 </div>
 
-                <div style={{
-                    marginTop: '60px',
-                    padding: '30px 0',
-                    borderTop: '1px solid rgba(255,255,255,0.2)',
-                    borderBottom: '1px solid rgba(255,255,255,0.2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '40px'
-                }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                        <div style={{ background: 'var(--secondary)', padding: '15px', borderRadius: '50%', color: '#fff', display: 'flex' }}>
-                            {/* Location Icon Placeholder */}
-                            📍
-                        </div>
-                        <div style={{ textAlign: 'left' }}>
-                            <a href="#" style={{ color: '#fff', fontSize: '19px', fontWeight: 500, display: 'block' }}>Helipad Exhibition Centre,</a>
-                            <span style={{ color: '#fff', fontSize: '19px', fontWeight: 500 }}>Gandhinagar, Gujarat</span>
+                <div className="hero-meta-row">
+                    <div className="hero-meta-item">
+                        <div className="meta-icon">📍</div>
+                        <div className="meta-text">
+                            <a href="#" className="meta-link">Helipad Exhibition Centre,</a>
+                            <span>Gandhinagar, Gujarat</span>
                         </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', borderLeft: '1px solid rgba(255,255,255,0.2)', paddingLeft: '40px' }}>
-                        <div style={{ background: 'var(--primary)', padding: '15px', borderRadius: '50%', color: '#fff', display: 'flex' }}>
-                            📅
-                        </div>
-                        <div style={{ textAlign: 'left' }}>
-                            <span style={{ color: '#fff', fontSize: '19px', fontWeight: 600, display: 'block' }}>11th & 12th April, 2026</span>
-                            <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px' }}>Save the Date!</span>
+
+                    <div className="hero-meta-item">
+                        <div className="meta-icon">📅</div>
+                        <div className="meta-text">
+                            <span className="meta-date">11th & 12th April, 2026</span>
+                            <span className="meta-sub">Save the Date!</span>
                         </div>
                     </div>
                 </div>
 
-                <div style={{ marginTop: '50px' }}>
-                    <a href="/book" className="theme-btn" style={{ padding: '15px 50px', fontSize: '1.2rem', fontWeight: 700 }}>Book Tickets Now</a>
+                <div className="hero-cta">
+                    <a href="/book" className="theme-btn">Book Tickets Now</a>
                 </div>
             </div>
         </section>
