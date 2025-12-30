@@ -13,7 +13,7 @@ const Speakers = () => {
         <section id="speakers" style={{ background: '#fff' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 className="section-title">Speakers At Tech Expo '24</h2>
+                    <h2 className="section-title">Speakers At SVBE '24</h2>
                     <p style={{ color: '#666' }}>Gain valuable insights from industry experts and ignite the drive to excel in your field.</p>
                 </div>
 

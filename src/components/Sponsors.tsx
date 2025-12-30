@@ -8,9 +8,9 @@ const Sponsors = () => {
 
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-                    <h2 style={{ color: '#fff', fontSize: '34px', fontWeight: 600 }}>Sponsors At Tech Expo '24</h2>
+                    <h2 style={{ color: '#fff', fontSize: '34px', fontWeight: 600 }}>Sponsors At SVBE '24</h2>
                     <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '20px auto 0' }}>
-                        Kudos to our Tech Expo sponsors, who are making it possible for cutting-edge solutions to come to life at this event.
+                        Kudos to our SVBE sponsors, who are making it possible for cutting-edge solutions to come to life at this event.
                     </p>
                 </div>
 

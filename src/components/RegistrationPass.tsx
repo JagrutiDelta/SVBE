@@ -120,13 +120,13 @@ const RegistrationPass = ({ data }: { data: PassData }) => {
                     border: '1px solid rgba(255, 255, 255, 0.05)',
                     boxShadow: 'inset 0 0 20px rgba(0,0,0,0.2)'
                 }}>
-                    <div style={{
+                        <div style={{
                         background: 'white',
                         padding: '10px',
                         borderRadius: '12px',
                         boxShadow: '0 10px 20px rgba(0,0,0,0.3)'
                     }}>
-                        <QRCodeSVG value={`https://techexpogujarat.com/verify/${data.bookingRef}`} size={85} level="H" />
+                        <QRCodeSVG value={`https://www.svbe.com/verify/${data.bookingRef}`} size={85} level="H" />
                     </div>
                     <div style={{ flex: 1 }}>
                         <label style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', display: 'block', marginBottom: '6px', letterSpacing: '1px' }}>Reference ID</label>

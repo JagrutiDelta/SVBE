@@ -14,7 +14,7 @@ const OurTeam = () => {
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '50px' }}>
                     <h2 className="section-title">Meet Our Team</h2>
-                    <p style={{ color: '#666' }}>The visionary leaders and dedicated experts behind Tech Expo Gujarat.</p>
+                    <p style={{ color: '#666' }}>The visionary leaders and dedicated experts behind SVBE.</p>
                 </div>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
