@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,6 +13,14 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    useEffect(() => {
+        // prevent body scroll when mobile menu open
+        document.body.style.overflow = mobileOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [mobileOpen]);
+
+    const toggleMobile = () => setMobileOpen(v => !v);
 
     return (
         <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
@@ -26,6 +35,24 @@ const Header = () => {
                     <Link href="/contact" className="nav-link">Contact Us</Link>
                     <Link href="/book" className="theme-btn nav-cta">Book Tickets</Link>
                 </nav>
+
+                <button
+                    className={`nav-toggle ${mobileOpen ? 'open' : ''}`}
+                    aria-label="Toggle navigation"
+                    aria-expanded={mobileOpen}
+                    onClick={toggleMobile}
+                >
+                    <span className="bar" />
+                    <span className="bar" />
+                    <span className="bar" />
+                </button>
+
+                <div className={`mobile-nav ${mobileOpen ? 'open' : ''}`} role="menu">
+                    <Link href="/about" className="nav-link" onClick={() => setMobileOpen(false)}>About Expo</Link>
+                    <Link href="/expo" className="nav-link" onClick={() => setMobileOpen(false)}>Business Expo 2026</Link>
+                    <Link href="/contact" className="nav-link" onClick={() => setMobileOpen(false)}>Contact Us</Link>
+                    <Link href="/book" className="theme-btn nav-cta" onClick={() => setMobileOpen(false)}>Book Tickets</Link>
+                </div>
             </div>
         </header>
     );
