@@ -12,34 +12,23 @@ const Speakers = () => {
     return (
         <section id="speakers" style={{ background: '#fff' }}>
             <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                <div className="speakers-intro">
                     <h2 className="section-title">Speakers At SVBE '24</h2>
-                    <p style={{ color: '#666', fontSize: '18px', lineHeight: '1.6' }}>Gain valuable insights from industry experts and ignite the drive to excel in your field.</p>
+                    <p className="speakers-desc">Gain valuable insights from industry experts and ignite the drive to excel in your field.</p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
+                <div className="speakers-grid">
                     {speakers.map((s, i) => (
-                        <div key={i} style={{ textAlign: 'center' }}>
-                            <div style={{
-                                width: '100%',
-                                aspectRatio: '1/1.2',
-                                background: '#F1F0EE',
-                                borderRadius: '15px',
-                                overflow: 'hidden',
-                                marginBottom: '15px'
-                            }}>
+                        <div key={i} className="speaker-card">
+                            <div className="speaker-image-wrapper">
                                 <img
                                     src={`/assets/${s.img}`}
                                     alt={s.name}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover'
-                                    }}
+                                    className="speaker-image"
                                 />
                             </div>
-                            <h3 style={{ fontSize: '22px', fontWeight: 600, color: '#222', marginBottom: '8px' }}>{s.name}</h3>
-                            <p style={{ color: '#666', fontSize: '16px', lineHeight: '1.4' }}>{s.role}</p>
+                            <h3 className="speaker-name">{s.name}</h3>
+                            <p className="speaker-role">{s.role}</p>
                         </div>
                     ))}
                 </div>
