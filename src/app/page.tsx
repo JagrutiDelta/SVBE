@@ -5,7 +5,6 @@ import Stats from "@/components/Stats";
 import AtalBridge from "@/components/AtalBridge";
 import Events from "@/components/Events";
 import IndustrySolutions from "@/components/IndustrySolutions";
-import Speakers from "@/components/Speakers";
 import Sponsors from "@/components/Sponsors";
 import OurTeam from "@/components/OurTeam";
 import Footer from "@/components/Footer";
@@ -39,7 +38,6 @@ export default function Home() {
                 </div>
             </section>
 
-            <Speakers />
             <Sponsors />
             <OurTeam />
             <Footer />

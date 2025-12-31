@@ -2,11 +2,11 @@
 
 const OurTeam = () => {
     const team = [
-        { name: "Arjun Reddy", role: "Founder", img: "ai_speaker_sonu.png" },
-        { name: "Vivaan Bhatt", role: "Co-Founder", img: "ai_speaker_sonu.png" },
-        { name: "Kabir Das", role: "CEO", img: "ai_speaker_savjibhai.png" },
-        { name: "Reyansh Iyer", role: "VP Operations", img: "ai_speaker_sonu.png" },
-        { name: "Dhruv Kapoor", role: "Tech Lead", img: "ai_speaker_sonu.png" }
+        { name: "Dr. Aryan Sharma", role: "Innovation Strategist & Keynote Speaker", img: "speaker_1.jpg" },
+        { name: "Hemant Desai", role: "Chairman, Apex Industries", img: "speaker_2.jpg" },
+        { name: "Swami Chidanand", role: "Spiritual Mentor & Guide", img: "speaker_3.jpg" },
+        { name: "Rahul Verma", role: "CEO, TechVantage Solutions", img: "speaker_4.jpg" },
+        { name: "Sanjay Mehta", role: "Founder, Future Ventures", img: "speaker_5.jpg" }
     ];
 
     return (

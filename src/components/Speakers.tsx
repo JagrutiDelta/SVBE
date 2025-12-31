@@ -14,7 +14,7 @@ const Speakers = () => {
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <h2 className="section-title">Speakers At SVBE '24</h2>
-                    <p style={{ color: '#666' }}>Gain valuable insights from industry experts and ignite the drive to excel in your field.</p>
+                    <p style={{ color: '#666', fontSize: '18px', lineHeight: '1.6' }}>Gain valuable insights from industry experts and ignite the drive to excel in your field.</p>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
@@ -38,8 +38,8 @@ const Speakers = () => {
                                     }}
                                 />
                             </div>
-                            <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#222' }}>{s.name}</h3>
-                            <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.2' }}>{s.role}</p>
+                            <h3 style={{ fontSize: '22px', fontWeight: 600, color: '#222', marginBottom: '8px' }}>{s.name}</h3>
+                            <p style={{ color: '#666', fontSize: '16px', lineHeight: '1.4' }}>{s.role}</p>
                         </div>
                     ))}
                 </div>

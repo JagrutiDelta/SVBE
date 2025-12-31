@@ -34,6 +34,10 @@ const Header = () => {
                     <Link href="/expo" className="nav-link">Business Expo 2026</Link>
                     <Link href="/contact" className="nav-link">Contact Us</Link>
                     <Link href="/book" className="theme-btn nav-cta">Book Tickets</Link>
+                    <a href="tel:+919558840767" className="theme-btn nav-cta" style={{ background: 'var(--secondary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ fontSize: '16px' }}>📞</span>
+                        Call for Inquiry
+                    </a>
                 </nav>
 
                 <button
@@ -52,6 +56,10 @@ const Header = () => {
                     <Link href="/expo" className="nav-link" onClick={() => setMobileOpen(false)}>Business Expo 2026</Link>
                     <Link href="/contact" className="nav-link" onClick={() => setMobileOpen(false)}>Contact Us</Link>
                     <Link href="/book" className="theme-btn nav-cta" onClick={() => setMobileOpen(false)}>Book Tickets</Link>
+                    <a href="tel:+919558840767" className="theme-btn nav-cta" style={{ background: 'var(--secondary)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>
+                        <span style={{ fontSize: '16px' }}>📞</span>
+                        Call for Inquiry
+                    </a>
                 </div>
             </div>
         </header>
