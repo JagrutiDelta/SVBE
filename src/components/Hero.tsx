@@ -47,8 +47,9 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-cta">
+                <div className="hero-cta" style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="/book" className="theme-btn">Book Tickets Now</a>
+                    <a href="/contact" className="theme-btn outline">Inquiry</a>
                 </div>
             </div>
         </section>

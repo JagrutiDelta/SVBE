@@ -147,6 +147,57 @@ section {
   }
 }
 
+/* Speakers Section Styles */
+.speakers-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.speakers-desc {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.speaker-card {
+  text-align: center;
+}
+
+.speaker-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1.2;
+  background: #F1F0EE;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+  font-family: var(--font-outfit);
+}
+
+.speaker-role {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .container {
@@ -185,6 +236,22 @@ section {
   .section-title {
     font-size: 22px;
     padding-bottom: 10px;
+  }
+
+  .speakers-intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .speakers-desc {
+    font-size: 16px;
+  }
+
+  .speaker-name {
+    font-size: 18px;
+  }
+
+  .speaker-role {
+    font-size: 14px;
   }
 
   /* Hero adjustments */
@@ -251,6 +318,10 @@ section {
   nav {
     display: none !important;
   }
+
+
+
+
 }
 
 /* Header styles */
@@ -303,15 +374,7 @@ section {
   margin-left: 10px;
 }
 
-@media (max-width: 992px) {
-  .site-nav {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
-}
+/* Moved media query to after nav-toggle definition */
 
 /* Mobile nav toggle (hamburger) */
 .nav-toggle {
@@ -324,6 +387,8 @@ section {
   align-items: center;
   justify-content: center;
   padding: 6px;
+  position: relative;
+  z-index: 1300;
 }
 
 .nav-toggle .bar {
@@ -333,6 +398,17 @@ section {
   background: var(--foreground);
   margin: 4px 0;
   transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* White bars for transparent header (unscrolled) */
+.site-header:not(.scrolled) .nav-toggle .bar {
+  background: #fff;
+}
+
+/* Dark bars when menu is open or header is scrolled */
+.site-header.scrolled .nav-toggle .bar,
+.nav-toggle.open .bar {
+  background: var(--foreground);
 }
 
 .nav-toggle.open .bar:nth-child(1) {
@@ -345,6 +421,16 @@ section {
 
 .nav-toggle.open .bar:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 992px) {
+  .site-nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
 }
 
 /* Mobile nav panel */
