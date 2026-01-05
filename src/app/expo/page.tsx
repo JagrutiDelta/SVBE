@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Events from '@/components/Events';
 import IndustrySolutions from '@/components/IndustrySolutions';
 
+
 const ExpoPage = () => {
     return (
         <main style={{ background: 'var(--background)', minHeight: '100vh' }}>

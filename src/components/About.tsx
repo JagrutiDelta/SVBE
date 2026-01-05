@@ -14,13 +14,15 @@ const About = () => {
                     <div style={{ flex: '1 1 500px', paddingRight: '10%' }}>
                         <h1 className="section-title">Shree Vishwakarma Community Business Expo 2026</h1>
                         <p style={{ fontSize: '18px', color: 'var(--secondary)', fontWeight: 600, marginBottom: '1rem' }}>
-                            Showcasing Strength, Diversity, and Innovation
+                            A two-day mega business exhibition featuring 123+ stalls by Mevada community businesses across Pharma Machinery, Textile, Construction, IT, Architecture, Furniture, Consulting, and more.
                         </p>
                         <p style={{ fontSize: '16px', color: '#666', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                            Shree Vishwakarma Community Business Expo 2026 is a landmark two-day business exhibition organized to showcase the strength, diversity, and innovation of businesses owned by members of the Mevada community. The expo aims to provide a powerful platform for networking, business growth, brand visibility, and collaboration across industries.
+                            Showcasing Strength, Diversity, and Innovation
                         </p>
                         <p style={{ fontSize: '16px', color: '#666', marginBottom: '2.5rem', lineHeight: '1.8' }}>
-                            A two-day mega business exhibition featuring 123+ stalls by Mevada community businesses across Pharma Machinery, Textile, Construction, IT, Architecture, Furniture, <strong>Consulting</strong>, and more. The Expo is open to all visitors and includes business networking zones, seminars, food stalls, and cultural programs—creating a powerful platform for business growth, collaboration, and visibility.
+                            Shree Vishwakarma Community Business Expo 2026 is a landmark two-day business exhibition organized to showcase the strength, diversity, and innovation of businesses owned by members of the Mevada community. The expo aims to provide a powerful platform for networking, business growth, brand visibility, and collaboration across industries.
+                            <br /><br />
+                            The Expo is open to all visitors and includes business networking zones, seminars, food stalls, and cultural programs—creating a powerful platform for business growth, collaboration, and visibility.
                         </p>
 
                         <div style={{ display: 'flex', gap: '30px' }}>

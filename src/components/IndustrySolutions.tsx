@@ -2,15 +2,14 @@
 
 const IndustrySolutions = () => {
     const industries = [
-        { name: "Healthcare", img: "healthcare.png" },
-        { name: "Manufacturing", img: "manufacturing.png" },
-        { name: "Agriculture", img: "electronics.png" }, // Replaced with existing asset
-        { name: "Automobiles", img: "electronics.png" }, // Placeholder
-        { name: "Energy", img: "electronics.png" },
-        { name: "Finance", img: "finance-institutions.png" },
-        { name: "Retail", img: "retailers.png" },
-        { name: "Textiles", img: "textile-garments.png" },
-        { name: "Insurance", img: "insurance.png" }
+        { name: "Pharma Machinery", img: "healthcare.png" },
+        { name: "Textile & Garments", img: "textile-garments.png" },
+        { name: "Construction", img: "manufacturing.png" },
+        { name: "Software & IT", img: "digital-transformation-img.png" },
+        { name: "Architecture", img: "knowledge-img.png" }, // Generic placeholder
+        { name: "Furniture", img: "about-industry-img.png" }, // Generic placeholder
+        { name: "Consulting", img: "finance-institutions.png" },
+        { name: "Engineering", img: "electronics.png" }
     ];
 
     return (
