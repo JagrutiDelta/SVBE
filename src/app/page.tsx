@@ -16,6 +16,7 @@ import MevadaSutharSamaj from "@/components/MevadaSutharSamaj";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+    // SVBE 2026 Home Page
     return (
         <main>
             <Header />
