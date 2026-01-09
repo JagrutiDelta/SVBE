@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^6.19.1",
     "@types/canvas-confetti": "^1.9.0",
     "canvas-confetti": "^1.9.4",
     "dotenv": "^17.2.3",
@@ -31,7 +30,6 @@
     "dotenv-cli": "^11.0.0",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "prisma": "^6.19.1",
     "typescript": "latest"
   }
 }
