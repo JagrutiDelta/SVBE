@@ -14,7 +14,7 @@ const Header = () => {
 
     useEffect(() => {
         document.body.style.overflow = mobileOpen ? "hidden" : "";
-        return () => (document.body.style.overflow = "");
+        return () => { document.body.style.overflow = ""; };
     }, [mobileOpen]);
 
     return (
