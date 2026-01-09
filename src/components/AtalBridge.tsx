@@ -28,7 +28,7 @@ const AtalBridge = () => {
                 }}>
                     <span>Join Now</span>
                     <img src="/assets/platinum-icon.png" style={{ height: '20px' }} alt="" />
-                    <span style={{ color: 'var(--secondary)' }}>GUJARAT’S FIRST BUSINESS RETREAT</span>
+                    <span style={{ color: 'var(--secondary)' }}></span>
                     <img src="/assets/gold-icon.png" style={{ height: '20px' }} alt="" />
                     <span>Stay Connected</span>
                     <img src="/assets/silver-icon.png" style={{ height: '20px' }} alt="" />
@@ -37,7 +37,7 @@ const AtalBridge = () => {
                     {/* Duplicate for seamless loop */}
                     <span>Join Now</span>
                     <img src="/assets/platinum-icon.png" style={{ height: '20px' }} alt="" />
-                    <span style={{ color: 'var(--secondary)' }}>GUJARAT’S FIRST BUSINESS RETREAT</span>
+                    <span style={{ color: 'var(--secondary)' }}> Powered by Community, Driven by Business</span>
                     <img src="/assets/gold-icon.png" style={{ height: '20px' }} alt="" />
                     <span>Stay Connected</span>
                     <img src="/assets/silver-icon.png" style={{ height: '20px' }} alt="" />
@@ -47,7 +47,7 @@ const AtalBridge = () => {
                 <style jsx>{`
                     @keyframes marquee {
                         0% { transform: translateX(0); }
-                        100% { transform: translateX(-50%); }
+                        100% { transform: translateX(50%); }
                     }
                 `}</style>
             </div>

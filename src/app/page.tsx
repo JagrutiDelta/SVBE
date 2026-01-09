@@ -1,14 +1,18 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Why from "@/components/Why";
+import ExpoObjectives from "@/components/ExpoObjectives";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
 import AtalBridge from "@/components/AtalBridge";
 import Events from "@/components/Events";
+import StallVisuals from "@/components/StallVisuals";
 import IndustrySolutions from "@/components/IndustrySolutions";
 import Sponsors from "@/components/Sponsors";
 import Schedule from "@/components/Schedule";
 import WhyVisit from "@/components/WhyVisit";
-import OurTeam from "@/components/OurTeam";
+import OrganizerCommittee from "@/components/OrganizerCommittee";
+import MevadaSutharSamaj from "@/components/MevadaSutharSamaj";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,34 +20,17 @@ export default function Home() {
         <main>
             <Header />
             <Hero />
+            <Why />
+            <ExpoObjectives />
             <About />
-            <Stats />
-            <AtalBridge />
             <Events />
+            <StallVisuals />
             <IndustrySolutions />
-
-            {/* Black Vortex CTA Section as seen in screenshot */}
-            <section style={{ backgroundColor: '#000', color: '#fff', padding: '100px 0' }}>
-                <div className="container">
-                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '50px' }}>
-                        <div style={{ flex: '1 1 400px' }}>
-                            <h2 style={{ fontSize: '34px', color: '#fff', marginBottom: '20px' }}>Digital Transformation For Your Business</h2>
-                            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', lineHeight: '1.8', marginBottom: '30px' }}>
-                                Harness the power of cutting-edge technology to revolutionize your operations and drive unprecedented growth in the digital era.
-                            </p>
-                            <button className="theme-btn">Get Started Now</button>
-                        </div>
-                        <div style={{ flex: '1 1 400px', textAlign: 'center' }}>
-                            <img src="/assets/digital-transformation-img.png" alt="Transformation" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 0 50px rgba(128, 0, 0, 0.4)' }} />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <WhyVisit />
-            <Schedule />
-            {/* <Sponsors /> */}
-            {/* <OurTeam /> */}
+            <OrganizerCommittee />
+            <MevadaSutharSamaj />
+            <AtalBridge />
+            <Stats />
             <Footer />
         </main>
     );

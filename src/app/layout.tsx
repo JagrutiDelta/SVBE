@@ -15,6 +15,15 @@ const outfit = Outfit({
 export const metadata: Metadata = {
     title: "SHREE VISHWAKARMA BUSINESS EXPO 2026",
     description: "Gujarat's landmark two-day business exhibition showcasing the strength, diversity, and innovation of businesses owned by members of the Mevada community.",
+    icons: {
+        icon: [
+            { url: '/assets/svbe_logo_new.png', type: 'image/png' }
+        ],
+        apple: [
+            { url: '/assets/svbe_logo_new.png', type: 'image/png' }
+        ],
+        shortcut: '/assets/svbe_logo_new.png',
+    },
 };
 
 export default function RootLayout({

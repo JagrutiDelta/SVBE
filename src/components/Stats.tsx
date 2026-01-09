@@ -2,10 +2,10 @@
 
 const Stats = () => {
     const stats = [
-        { label: "Visitors", value: "5000+", icon: "attendees-icon.png", color: "var(--secondary)" },
+        { label: "Visitors", value: "10000+", icon: "attendees-icon.png", color: "var(--secondary)" },
         { label: "Community", value: "Mevada", icon: "sponsors-icon.png", color: "var(--primary)" },
-        { label: "Sections", value: "8+", icon: "speakers-icon.png", color: "var(--accent)" },
-        { label: "Stalls", value: "123+", icon: "exhibitors-icon.png", color: "#B8860B" }
+        { label: "Days", value: "2", icon: "speakers-icon.png", color: "var(--accent)" },
+        { label: "Stalls", value: "119+", icon: "exhibitors-icon.png", color: "#B8860B" }
     ];
 
     return (

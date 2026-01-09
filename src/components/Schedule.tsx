@@ -7,7 +7,7 @@ const Schedule = () => {
     const scheduleData = {
         1: [
             { time: "09:00 AM", title: "Inauguration Ceremony", desc: "Grand opening by Chief Guest & Community Leaders" },
-            { time: "10:30 AM", title: "Expo Floor Opens", desc: "Visit 123+ Stalls across various industries" },
+            { time: "10:30 AM", title: "Expo Floor Opens", desc: "Visit 119+ Stalls across various industries" },
             { time: "01:00 PM", title: "Networking Lunch", desc: "Connect with industry peers over lunch" },
             { time: "03:00 PM", title: "Panel Discussion: Future of Manufacturing", desc: "Insights from industry experts" },
             { time: "06:00 PM", title: "Cultural Program", desc: "Evening performance by community talent" }

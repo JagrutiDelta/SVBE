@@ -7,7 +7,7 @@ const Footer = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', marginBottom: '40px' }}>
                     {/* Brand */}
                     <div>
-                        <h3 style={{ color: 'var(--primary)', fontSize: '24px', fontWeight: 700, marginBottom: '20px' }}>SVBE 2026</h3>
+                        <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: 700, marginBottom: '20px' }}>SVBE 2026</h3>
                         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', lineHeight: '1.8' }}>
                             Landmark two-day business exhibition showcasing Mevada community businesses across various industries.
                         </p>
@@ -18,8 +18,8 @@ const Footer = () => {
                         <h4 style={{ color: '#fff', marginBottom: '25px', fontSize: '18px' }}>Sections</h4>
                         <ul style={{ listStyle: 'none', padding: 0 }}>
                             <li style={{ marginBottom: '12px' }}><a href="#" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Business Expo 2026</a></li>
-                            <li style={{ marginBottom: '12px' }}><a href="#" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Networking Zone</a></li>
-                            <li style={{ marginBottom: '12px' }}><a href="#" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Stall Inquiry</a></li>
+                            <li style={{ marginBottom: '12px' }}><a href="https://svkbe2026.onrender.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Stall Layout and Booking</a></li>
+                            <li style={{ marginBottom: '12px' }}><a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ3a4kR1EuqYMvIYknL9KvKyyhFZEUIMs1cwZlVgeCQurV0g/viewform?usp=preview" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Stall Inquiry</a></li>
                         </ul>
                     </div>
 

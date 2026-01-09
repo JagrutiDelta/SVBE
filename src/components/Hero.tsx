@@ -1,8 +1,28 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 
+import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+
 const Hero = () => {
-    const industries = ["Pharma Machinery", "Textile", "Construction", "IT", "Architecture", "Furniture", "Consulting"];
+    const industries = [
+        "Architect and Interior Designer",
+        "Builder and Developer",
+        "Pharma Machinery/Parts",
+        "Textile Machinery/Parts",
+        "Engineering",
+        "Software and IT",
+        "Health and Medical",
+        "Furniture",
+        "Traders",
+        "Banking and Finance",
+        "CMC VMC job work unit",
+        "Industrial Product Manufacture",
+        "Fabrication Workshop",
+        "Laser Cutting and Welding",
+        "Automation",
+        "Tooling",
+        "Service Providers"
+    ];
     const [currentIndustry, setCurrentIndustry] = useState(0);
 
     useEffect(() => {
@@ -12,34 +32,73 @@ const Hero = () => {
         return () => clearInterval(timer);
     }, []);
 
+    const handleSaveDate = () => {
+        const event = {
+            title: "Shree Vishwakarma Business Expo 2026",
+            location: "Helipad Exhibition Centre, Gandhinagar, Gujarat",
+            description: "Join us for the Shree Vishwakarma Business Expo 2026. Powered by Community, Driven by Business.",
+            startDate: "20260411T090000",
+            endDate: "20260412T180000"
+        };
+
+        const icsContent =
+            `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:${event.title}
+LOCATION:${event.location}
+DESCRIPTION:${event.description}
+DTSTART:${event.startDate}
+DTEND:${event.endDate}
+END:VEVENT
+END:VCALENDAR`;
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'svbe-expo-2026.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <section className="home-banner-sec hero-section">
             <div className="hero-overlay"></div>
 
             <div className="container hero-inner">
-                <h2 className="hero-title">Shree Vishwakarma Business Expo</h2>
+                <div className="hero-title-wrapper">
+                    <h2 className="hero-title gradient-text">For the First Time</h2>
+                    <div className="gradient-underline"></div>
+                </div>
+
+                <div className="hero-speaker-row">
+                    <span className="hero-meta-text">Powered by Community</span>
+                    <img src="/assets/svbe_logo_new.png" alt="Shree Vishwakarma Business Expo" className="hero-image hero-center-logo" />
+                    <span className="hero-meta-text">Driven by Business</span>
+                </div>
 
                 <div className="hero-industry-wrap">
                     <p className="hero-industry">{industries[currentIndustry]}</p>
                 </div>
 
-                <div className="hero-speaker-row">
-                    <span className="hero-meta-text">Mevada Community</span>
-                    <img src="/assets/ai_speaker_sonu.png" alt="Speakers" className="hero-image" />
-                    <span className="hero-meta-text">123+ Stalls</span>
-                </div>
-
                 <div className="hero-meta-row">
                     <div className="hero-meta-item">
-                        <div className="meta-icon">📍</div>
+                        <div className="meta-icon"><FaMapMarkerAlt size={24} /></div>
                         <div className="meta-text">
-                            <a href="#" className="meta-link">Helipad Exhibition Centre,</a>
+                            <a href="https://maps.app.goo.gl/fjbZfYQJEpzpw3EQ8?g_st=ipc" target="blank" className="meta-link">Helipad Exhibition Centre,</a>
                             <span>Gandhinagar, Gujarat</span>
                         </div>
                     </div>
 
-                    <div className="hero-meta-item">
-                        <div className="meta-icon">📅</div>
+                    <div
+                        className="hero-meta-item clickable"
+                        onClick={handleSaveDate}
+                        title="Add to Calendar"
+                        style={{ cursor: 'pointer' }}
+                    >
+                        <div className="meta-icon"><FaCalendarAlt size={24} /></div>
                         <div className="meta-text">
                             <span className="meta-date">11th & 12th April, 2026</span>
                             <span className="meta-sub">Save the Date!</span>
@@ -50,8 +109,8 @@ const Hero = () => {
                 <Countdown targetDate="2026-04-11T09:00:00" />
 
                 <div className="hero-cta" style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a href="/book" className="theme-btn">Book Tickets Now</a>
-                    <a href="/contact" className="theme-btn outline">Inquiry</a>
+                    <a href="https://svkbe2026.onrender.com/" target="blank" rel="noopener noreferrer" className="theme-btn">Book Tickets Now</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ3a4kR1EuqYMvIYknL9KvKyyhFZEUIMs1cwZlVgeCQurV0g/viewform?usp=preview" target="blank" rel="noopener noreferrer" className="theme-btn outline">Inquiry</a>
                 </div>
             </div>
         </section>

@@ -35,3 +35,5 @@ next-env.d.ts
 # ignore Next build caches
 .next
 **/.next
+
+/src/generated/prisma

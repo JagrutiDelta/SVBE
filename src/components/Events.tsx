@@ -1,34 +1,42 @@
 "use client";
+import Link from 'next/link';
 
 const Events = () => {
     const events = [
         {
             title: "Exhibition",
-            img: "exhibition-img.png",
+            img: "Exhibition.jpg",
             icon: "exhibition-icon.png",
             color: "var(--secondary)",
             desc: "Explore 125+ exhibits offering cutting-edge solutions designed to meet the unique needs of various industries."
         },
         {
             title: "Knowledge sessions",
-            img: "knowledge-img.png",
+            img: "Knowledge Sessions.jpg",
             icon: "knowledge-icon.png",
             color: "var(--accent)",
             desc: "Gain deeper insights at the thought-provoking conferences scheduled at the expo."
         },
         {
             title: "Networking",
-            img: "networking-img.png",
+            img: "Networking.jpg",
             icon: "networking-icon.png",
             color: "var(--primary)",
             desc: "Unlock new growth opportunities by connecting and networking with industry experts."
         },
         {
             title: "Digital Transformation",
-            img: "digital-transformation-img.png",
+            img: "Digital Tranformation.jpg",
             icon: "digital-transformation-icon.png",
             color: "#B8860B",
             desc: "Revolutionize your business by harnessing the transformative power of technology."
+        },
+        {
+            title: "Job Opportunities",
+            img: "Job Opportunity.jpg",
+            icon: "attendees-icon.png",
+            color: "var(--secondary)",
+            desc: "Connect with top employers and discover career-defining opportunities in the industry."
         }
     ];
 
@@ -38,19 +46,13 @@ const Events = () => {
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <h2 className="section-title">Events At SVBE 2026</h2>
                     <p style={{ maxWidth: '700px', margin: '0 auto', color: '#666' }}>
-                        Explore 123+ stalls offering cutting-edge solutions across Pharma, Textile, IT, and more, designed to showcase community excellence.
+                        Explore 119+ stalls offering cutting-edge solutions across Pharma, Textile, IT, and more, designed to showcase community excellence.
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                <div className="events-wrapper">
                     {events.map((e, i) => (
-                        <div key={i} className="event-card" style={{
-                            position: 'relative',
-                            height: '400px',
-                            borderRadius: '12px',
-                            overflow: 'hidden',
-                            boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                        }}>
+                        <div key={i} className="event-card">
                             <img src={`/assets/${e.img}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{
                                 position: 'absolute',
@@ -83,9 +85,38 @@ const Events = () => {
                         </div>
                     ))}
                 </div>
+
+                <div style={{ textAlign: 'center', marginTop: '50px' }}>
+                    <Link href="https://svkbe2026.onrender.com/" target="_blank" className="theme-btn">
+                        Book Ticket Now
+                    </Link>
+                </div>
             </div>
 
             <style jsx>{`
+                .events-wrapper {
+                    display: flex;
+                    gap: 15px;
+                }
+                .event-card {
+                    position: relative;
+                    height: 400px;
+                    flex: 1;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                }
+                @media (max-width: 1024px) {
+                    .events-wrapper {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+                @media (max-width: 600px) {
+                    .events-wrapper {
+                        grid-template-columns: 1fr;
+                    }
+                }
                 .event-card .event-desc {
                     opacity: 0;
                     transform: translateY(20px);
@@ -100,6 +131,23 @@ const Events = () => {
                 }
                 .event-card:hover .event-info {
                     transform: translateY(-10px);
+                }
+                .book-btn {
+                    display: inline-block;
+                    padding: 16px 40px;
+                    background: var(--primary);
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 10px 20px rgba(13, 34, 51, 0.3);
+                }
+                .book-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 15px 30px rgba(13, 34, 51, 0.4);
+                    background: var(--primary-hover);
                 }
             `}</style>
         </section>
