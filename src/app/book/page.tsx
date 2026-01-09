@@ -39,33 +39,19 @@ const BookingPage = () => {
         // Generate a random booking reference
         const ref = 'EXPO' + Math.random().toString(36).substring(2, 8).toUpperCase();
 
-        try {
-            const res = await fetch('/api/bookings', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...formData, bookingRef: ref })
-            });
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 800));
 
-            if (!res.ok) {
-                const err = await res.json();
-                console.error('Booking failed:', err);
-                throw new Error('Failed to save booking');
-            }
+        setBookingRef(ref);
+        setSubmitted(true);
 
-            setBookingRef(ref);
-            setSubmitted(true);
-
-            // Celebrate!
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ['#800000', '#000000', '#ffd700']
-            });
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            alert('Something went wrong causing the booking to fail. Please try again.');
-        }
+        // Celebrate!
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#800000', '#000000', '#ffd700']
+        });
     };
 
     const handleDownload = async () => {
